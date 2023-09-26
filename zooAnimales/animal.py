@@ -1,3 +1,5 @@
+import zooAnimales
+
 class Animal:
 
     _totalAnimales = 0
@@ -30,7 +32,7 @@ class Animal:
     
     def setGenero(self, genero):
         self._genero = genero
-
+        
     def getGenero(self):
         return self._genero
     
@@ -49,3 +51,16 @@ class Animal:
     @classmethod
     def setTotalAnimales(cls, totalAnimales):
         cls._totalAnimales = totalAnimales
+    
+    @staticmethod
+    def totalPorTipo():
+        mensaje = "Mamiferos : " + str(zooAnimales.mamifero.Mamifero.cantidadMamiferos()) + "\nAves : " + str(zooAnimales.ave.Ave.cantidadAves()) + "\nReptiles : " + str(zooAnimales.reptil.Reptil.cantidadReptiles()) + "\nPeces : " + str(zooAnimales.pez.Pez.cantidadPeces()) + "\nAnfibios : " + str(zooAnimales.anfibio.Anfibio.cantidadAnfibios())
+        return mensaje
+
+    def toString(self):
+        if self._zona == "":
+            mensaje = "Mi nombre es " + self._nombre + ", tengo una edad de " + str(self._edad) + ", habito en " + self._habitat + " y mi genero es " + self._genero
+            return mensaje
+        else:
+            mensaje = "Mi nombre es " + self._nombre + ", tengo una edad de " + str(self._edad) +  ", habito en " + self._habitat + " y mi genero es " + self._genero + ", la zona en la que me ubico es " + self._zona.getNombre() + ", en el zoo " + self._zona.getZoo().getNombre()
+            return mensaje

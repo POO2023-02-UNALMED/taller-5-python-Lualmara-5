@@ -30,7 +30,7 @@ class Animal:
     
     def setGenero(self, genero):
         self._genero = genero
-        
+
     def getGenero(self):
         return self._genero
     

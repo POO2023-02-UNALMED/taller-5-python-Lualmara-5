@@ -13,6 +13,7 @@ class Ave(Animal):
     
     def setColorPlumas(self, colorPlumas):
         self._colorPlumas = colorPlumas
+        
     def getColorPlumas(self):
         return self._colorPlumas
 

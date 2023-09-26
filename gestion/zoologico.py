@@ -1,5 +1,4 @@
 class Zoologico:
-
     _zonas = []
 
     def __init__(self, nombre, ubicacion):
@@ -14,6 +13,7 @@ class Zoologico:
     
     def setUbicacion(self, ubicacion):
         self._ubicacion = ubicacion
+
     def getUbicacion(self):
         return self._ubicacion
 
